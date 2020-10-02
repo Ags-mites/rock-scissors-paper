@@ -1,0 +1,216 @@
+html{
+    font-size: 6.25%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    margin: 0 auto;
+    max-width: 1024rem;
+    height: 100vh;
+    background: linear-gradient(-180deg,hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    background-repeat:no-repeat;
+    font-size: 16rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.nav{
+    width: 85%;
+    height: 15vh;
+    margin: 15rem auto;
+    padding: 7rem;
+    border: 2rem solid hsl(217, 16%, 45%);    
+    border-radius: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30rem;
+}
+.nav-items {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+.nav-items > ul{
+    line-height: 1em;
+    font-size: 0.5em;
+    color: whitesmoke;
+    text-transform: uppercase;
+    list-style: none;
+    margin-left: 7rem;
+}
+.nav-score{
+    width: 25%;
+    height: 100%;
+    background-color: whitesmoke;
+    border-radius: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: hsl(229, 25%, 31%);
+    font-size: 1em;
+    font-weight: 700;
+}
+.nav-score > span{
+    font-size: 0.33em;
+    color: hsl(229, 64%, 46%);
+    letter-spacing: 1rem;
+}
+.game{
+    background-image: url("./../../images/bg-triangle.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 60vh;
+}
+.ingame,
+.result{
+    height: 100%;
+    font-size: 80rem;
+}
+.button-top, 
+.button-bottom{
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.button{
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button__blue{
+    border-bottom: 5rem solid hsl(230, 60%, 50%) ;
+    background: linear-gradient(-45deg, hsl(230, 89%, 62%) 75%, hsl(230, 89%, 65%));
+    background-repeat: no-repeat;
+}
+.button__yellow{
+    border-bottom: 5rem solid hsl(39, 89%, 40%);
+    background: linear-gradient(-45deg, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+    background-repeat: no-repeat;
+}
+.button__red{
+    border-bottom: 5rem solid hsl(349, 71%, 40%);
+    background: linear-gradient(-45deg, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+    background-repeat: no-repeat;
+}
+.button > button{
+    width: 75%;
+    height: 75%;
+    border-radius: 50%;
+    background-color: white;
+    border: 0;
+    border-top: 5rem solid rgb(224, 224, 224);
+    outline: none;
+}
+.button > button:hover{
+    cursor: pointer;
+    transform: scale(1.04);
+    transition: 0.2s;
+}
+.button button img{
+    width: 45%;
+}
+footer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.rules a{
+    text-decoration: none;
+    width: 90rem;
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 5rem;
+    border: 2rem solid hsl(217, 16%, 45%); 
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    font-size: 10rem;
+    outline: none;
+    cursor: pointer;
+}
+.rules a:hover{
+    text-decoration: underline;
+    background-color: white;
+    color: hsl(217, 16%, 45%);
+}
+
+.modal{
+    background-color:  hsla(240, 56%, 2%, 0.7);
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    opacity:0;
+    pointer-events:none;
+    transition: all 1s;
+    display: flex;
+    align-content: center;
+}
+
+.modal-content{
+    background-color:rgb(235, 235, 235);
+    max-width:320px;
+    height: 100vh;
+    border-radius: 5rem;
+    padding: 10rem 20rem;
+    margin: auto;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+.modal-header{
+    height: 10%;
+    margin: auto;
+    text-transform: uppercase;
+    color:  hsl(237, 49%, 15%);
+    display: flex;
+    align-items: center;
+}
+.modal-rules{
+    height: 70%; 
+    display: flex;
+    align-items: center;
+}
+.modal-rules img{
+    width: 100%;
+}
+.modal-footer{
+    height: 10%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+.close-modal{
+    background-image: url("./../../images/icon-close.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+    width: 25rem;
+    height: 25rem;
+    display: block;
+}
+#rules-esp:target{
+opacity:1;
+pointer-events:auto;
+}

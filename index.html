@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/css/style.css">
+  <link rel="stylesheet" href="./src/css/media768.css" media="screen and (min-width: 768px)">
+  <link rel="stylesheet" href="./src/css/media1024.css" media="screen and (min-width: 1024px)">
+  <script src="./src/js/juego.js"></script>
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+<!-- 
+  Score
+  Rules
+
+  You Picked
+  The House Picked
+
+  You Win
+  You Lose
+
+  Play Again -->
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <div class="nav-items">
+        <ul>
+          <li>Rock</li>
+          <li>Paper</li>
+          <li>Scissors</li>
+        </ul>
+      </div>
+      <div class="nav-score">
+        <span>score</span>
+        <p>12</p>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="game">
+      <div class="ingame ">
+        <div class="button-top">
+          <div class="button button__blue">
+            <button id="paper"><img src="./images/icon-paper.svg" alt=""></button>
+          </div>
+          <div class="button button__yellow">
+            <button id="scissors"><img src="./images/icon-scissors.svg" alt=""></button>
+          </div>
+        </div>
+        <div class="button-bottom">
+          <div class="button button__red">
+            <button id="rock"><img src="./images/icon-rock.svg" alt=""></button>
+          </div>
+        </div>
+      </div>
+      <div class="result" style="display:none">
+        <div class="button-top">
+          <div class="button button__blue">
+            <button><img src="./images/icon-paper.svg" alt=""></button>
+          </div>
+          <div class="button button__yellow">
+            <div><img src="./images/icon-scissors.svg" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="rules">
+      <a href="#rules-esp">Rules</a>
+    </div>
+    <div id="rules-esp" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Rules</h2>
+        </div>
+        <div class="modal-rules">
+          <img src="./images/image-rules.svg" alt="">
+        </div>  
+        <div class="modal-footer">
+          <a href="#" class="close-modal"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,38 @@
+@media (min-width:1024px) {
+    .nav{
+        max-width: 60%;
+        font-size: 45rem;
+    }
+    .game{
+        max-width: 50%;
+        margin: auto;
+    }
+    .ingame,
+    .result{
+        font-size: 110rem;
+    }
+    .rules button{
+        width: 120rem;
+        height: 40rem;
+    }
+    .modal-content{
+        height: 70vh;
+    }
+    .modal-header{
+        order: 1;
+        margin: 0;
+        width: 90%;
+    }
+    .modal-rules{
+        order: 3;
+    }
+    .modal-footer{
+        order: 2;
+        margin: 0;
+        width: 10%;
+        
+    }
+    .modal-content{
+        height: 70vh;
+    }
+}
