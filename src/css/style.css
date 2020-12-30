@@ -61,20 +61,32 @@ body{
     color: hsl(229, 64%, 46%);
     letter-spacing: 1rem;
 }
+
 .game{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 65vh;
+}
+.hide{
+    display: none;
+}
+.ingame{
     background-image: url("./../../images/bg-triangle.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 50%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height: 60vh;
 }
 .ingame,
 .result{
     height: 100%;
     font-size: 80rem;
+}
+.result__selection {
+    font-size: 12rem;
+    color: white;
+    text-align: center;
+    display: inline-block;
 }
 .button-top, 
 .button-bottom{
@@ -114,16 +126,49 @@ body{
     border: 0;
     border-top: 5rem solid rgb(224, 224, 224);
     outline: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+}
+.button__blue > button{
+    background-image: url("./../../images/icon-paper.svg");
+}
+.button__yellow > button{
+    background-image: url("./../../images/icon-scissors.svg");
+}
+.button__red > button{
+    background-image: url("./../../images/icon-rock.svg");
 }
 .button > button:hover{
     cursor: pointer;
     transform: scale(1.04);
     transition: 0.2s;
-}
-.button button img{
+} 
+.button img{
     width: 45%;
 }
+.playAgain {
+    text-align:center;
+    
+}
+.playAgain h2{
+    font-size: 16rem;
+    color:white;
+}
+.playAgain .button_playAgain{
+    width: 150rem;
+    height: 35rem;
+    border-radius: 5rem;
+    outline: none;
+    border: 0; 
+    font-size: 12rem;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+    color: hsl(229, 64%, 46%);
+    cursor: pointer;
+}
 footer{
+    height: 20vh;
     width: 100%;
     display: flex;
     align-items: center;

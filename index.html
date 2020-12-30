@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="./src/css/style.css">
   <link rel="stylesheet" href="./src/css/media768.css" media="screen and (min-width: 768px)">
   <link rel="stylesheet" href="./src/css/media1024.css" media="screen and (min-width: 1024px)">
-  <script src="./src/js/juego.js"></script>
   <title>Frontend Mentor | Rock, Paper, Scissors</title>
 <!-- 
   Score
@@ -37,7 +36,7 @@
         <ul>
           <li>Rock</li>
           <li>Paper</li>
-          <li>Scissors</li>
+          <li>tijeras</li>
         </ul>
       </div>
       <div class="nav-score">
@@ -48,29 +47,40 @@
   </header>
   <main>
     <section class="game">
-      <div class="ingame ">
+      <div class="ingame" id="ingame">
         <div class="button-top">
           <div class="button button__blue">
-            <button id="paper"><img src="./images/icon-paper.svg" alt=""></button>
+            <button id="paper"></button>
+            <h2 id="demo"></h2>
           </div>
           <div class="button button__yellow">
-            <button id="scissors"><img src="./images/icon-scissors.svg" alt=""></button>
+            <button id="scissors"></button>
           </div>
         </div>
         <div class="button-bottom">
           <div class="button button__red">
-            <button id="rock"><img src="./images/icon-rock.svg" alt=""></button>
+            <button id="rock"></button>
           </div>
         </div>
       </div>
-      <div class="result" style="display:none">
+      <div class="result hide" id="result">
+        <div class="result__selection">
+          <p>The House Picked</p>
+          <p>You Picked</p>
+        </div>
         <div class="button-top">
-          <div class="button button__blue">
-            <button><img src="./images/icon-paper.svg" alt=""></button>
+          <div id="YouPicked"  class="button">
+            <button></button>
           </div>
-          <div class="button button__yellow">
-            <div><img src="./images/icon-scissors.svg" alt=""></div>
+          <div id="TheHousePicked"  class="button">
+            <button></button>
           </div>
+        </div>
+        <div class="playAgain">
+          <h2 id="text__result"></h2>
+          <button class="button_playAgain">
+            Play Again
+          </button>
         </div>
       </div>
     </section>
@@ -82,7 +92,7 @@
     <div id="rules-esp" class="modal">
       <div class="modal-content">
         <div class="modal-header">
-          <h2>Rules</h2>
+          <h3>Rules</h3>
         </div>
         <div class="modal-rules">
           <img src="./images/image-rules.svg" alt="">
@@ -94,4 +104,5 @@
     </div>
   </footer>
 </body>
+<script src="./src/js/juego.js"></script>
 </html>
