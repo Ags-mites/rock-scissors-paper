@@ -12,7 +12,6 @@ let classButtons = [
     "button__red"
 ]
 
-console.log(classButtons)
 paper.onclick = () => Game(0)
 scissors.onclick = () => Game(1)
 rock.onclick = () => Game(2)

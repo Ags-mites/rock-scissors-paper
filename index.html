@@ -8,6 +8,7 @@
   
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./src/css/style.css">
+  <link rel="stylesheet" href="./src/css/animacion.css">
   <link rel="stylesheet" href="./src/css/media768.css" media="screen and (min-width: 768px)">
   <link rel="stylesheet" href="./src/css/media1024.css" media="screen and (min-width: 1024px)">
   <title>Frontend Mentor | Rock, Paper, Scissors</title>
@@ -48,36 +49,31 @@
   <main>
     <section class="game">
       <div class="ingame" id="ingame">
-        <div class="button-top">
-          <div class="button button__blue">
-            <button id="paper"></button>
-            <h2 id="demo"></h2>
-          </div>
-          <div class="button button__yellow">
-            <button id="scissors"></button>
-          </div>
+        <div class="button button__blue">
+          <button id="paper"></button>
         </div>
-        <div class="button-bottom">
-          <div class="button button__red">
-            <button id="rock"></button>
-          </div>
+        <div class="button button__yellow">
+          <button id="scissors"></button>
+        </div>
+        <div class="button button__red">
+          <button id="rock"></button>
         </div>
       </div>
       <div class="result hide" id="result">
         <div class="result__selection">
-          <p>The House Picked</p>
           <p>You Picked</p>
-        </div>
-        <div class="button-top">
           <div id="YouPicked"  class="button">
             <button></button>
           </div>
+        </div>
+        <div class="result__selection">
+          <p>The House Picked</p>
           <div id="TheHousePicked"  class="button">
             <button></button>
           </div>
         </div>
         <div class="playAgain">
-          <h2 id="text__result"></h2>
+          <h2 id="text__result">ganaste</h2>
           <button class="button_playAgain">
             Play Again
           </button>

@@ -7,16 +7,16 @@ html{
     box-sizing: border-box;
 }
 body{
-    font-family: 'Barlow Semi Condensed', sans-serif;
-    margin: 0 auto;
     max-width: 1024rem;
     height: 100vh;
+    margin: 0 auto;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 16rem;
     background: linear-gradient(-180deg,hsl(214, 47%, 23%), hsl(237, 49%, 15%));
     background-repeat:no-repeat;
-    font-size: 16rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-around; 
 }
 .nav{
     width: 85%;
@@ -29,11 +29,6 @@ body{
     justify-content: space-between;
     align-items: center;
     font-size: 30rem;
-}
-.nav-items {
-    width: 50%;
-    display: flex;
-    align-items: center;
 }
 .nav-items > ul{
     line-height: 1em;
@@ -68,32 +63,33 @@ body{
     flex-direction: column;
     height: 65vh;
 }
-.hide{
-    display: none;
-}
 .ingame{
     background-image: url("./../../images/bg-triangle.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 50%;
 }
-.ingame,
+.ingame, 
 .result{
-    height: 100%;
-    font-size: 80rem;
+    height: inherit;
+    font-size: 100rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
 }
-.result__selection {
-    font-size: 12rem;
+.ingame .button:nth-child(3),
+.result div:nth-child(3){
+    grid-column: span 2;
+}
+.result p{
+    font-size: 16rem;
     color: white;
     text-align: center;
-    display: inline-block;
+    margin-bottom: 16rem;
 }
-.button-top, 
-.button-bottom{
-    height: 50%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.hide{
+    display: none;
 }
 .button{
     width: 1em;
@@ -102,6 +98,15 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.button__blue > button{
+    background-image: url("./../../images/icon-paper.svg");
+}
+.button__yellow > button{
+    background-image: url("./../../images/icon-scissors.svg");
+}
+.button__red > button{
+    background-image: url("./../../images/icon-rock.svg");
 }
 .button__blue{
     border-bottom: 5rem solid hsl(230, 60%, 50%) ;
@@ -130,30 +135,20 @@ body{
     background-position: center;
     background-size: 50%;
 }
-.button__blue > button{
-    background-image: url("./../../images/icon-paper.svg");
-}
-.button__yellow > button{
-    background-image: url("./../../images/icon-scissors.svg");
-}
-.button__red > button{
-    background-image: url("./../../images/icon-rock.svg");
-}
 .button > button:hover{
     cursor: pointer;
     transform: scale(1.04);
     transition: 0.2s;
 } 
-.button img{
-    width: 45%;
-}
 .playAgain {
-    text-align:center;
-    
+    display: flex;
+    flex-direction:column;
+    align-items: center; 
 }
 .playAgain h2{
     font-size: 16rem;
     color:white;
+    margin-bottom: 16rem;
 }
 .playAgain .button_playAgain{
     width: 150rem;
@@ -256,6 +251,6 @@ footer{
     display: block;
 }
 #rules-esp:target{
-opacity:1;
-pointer-events:auto;
+    opacity:1;
+    pointer-events:auto;
 }
